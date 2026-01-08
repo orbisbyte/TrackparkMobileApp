@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1090657500950",
+    "project_id": "airportparkingtracking",
+    "storage_bucket": "airportparkingtracking.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090657500950:android:96c5f7de6b62e54206da37",
+        "android_client_info": {
+          "package_name": "com.example.driver_tracking_airport"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ5nDqu8FAxzEqg1R3D40EbjT0NATrEf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
