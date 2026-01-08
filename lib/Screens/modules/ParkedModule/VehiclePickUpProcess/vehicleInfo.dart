@@ -173,7 +173,29 @@ class VehicleInfoScreen extends StatelessWidget {
             ),
             const SizedBox(height: 40),
 
-            Text("no of passengers to be added"),
+            if (controller.currentJob?.vehicle?.passengers != null &&
+                int.tryParse(
+                      controller.currentJob?.vehicle?.passengers ?? '',
+                    ) !=
+                    null &&
+                int.parse(controller.currentJob?.vehicle?.passengers ?? '0') >
+                    0)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 12.0),
+                child: Row(
+                  children: [
+                    const Icon(Icons.people, color: Colors.blue),
+                    const SizedBox(width: 8),
+                    Text(
+                      "No of Passengers: ${controller.currentJob?.vehicle?.passengers?.toString() ?? ''}",
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
             // Continue Button
           ],

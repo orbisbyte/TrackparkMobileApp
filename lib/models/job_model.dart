@@ -6,8 +6,9 @@ class VehicleInfo {
   final String? model;
   final String? colour;
   final String? regNo;
+  final String? passengers;
 
-  VehicleInfo({this.make, this.model, this.colour, this.regNo});
+  VehicleInfo({this.make, this.model, this.colour, this.regNo, this.passengers});
 
   factory VehicleInfo.fromJson(Map<String, dynamic> json) {
     return VehicleInfo(
@@ -16,24 +17,27 @@ class VehicleInfo {
       colour:
           json['Colour'] ?? json['Colour'] ?? json['color'] ?? json['colour'],
       regNo: json['RegNo'] ?? json['regNo'] ?? json['plate'],
+      passengers: json['Passengers'] ?? json['passenger'] ,
     );
   }
 
   Map<String, dynamic> toJson() {
-    return {'Make': make, 'Model': model, 'Colour': colour, 'RegNo': regNo};
+    return {'Make': make, 'Model': model, 'Colour': colour, 'RegNo': regNo, 'Passengers': passengers};
   }
 
   VehicleInfo copyWith({
     String? make,
     String? model,
     String? colour,
-    String? regNo,
+    String? regNo,    
+    String? passengers,
   }) {
     return VehicleInfo(
       make: make ?? this.make,
       model: model ?? this.model,
       colour: colour ?? this.colour,
       regNo: regNo ?? this.regNo,
+      passengers: passengers ?? this.passengers,
     );
   }
 }

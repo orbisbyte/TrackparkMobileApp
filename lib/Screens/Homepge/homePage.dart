@@ -93,10 +93,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
             // Upload progress section (shows one row per active isolate upload)
             const UploadsProgressSection(),
             const SizedBox(height: 12),
+
             // Ongoing Job Section (at top)
-            const OngoingJobSection(),
-            if (dashBoardController.ongoingJob.value != null)
-              const SizedBox(height: 24),
+            // const OngoingJobSection(),
+            // if (dashBoardController.ongoingJob.value != null)
+            //   const SizedBox(height: 24),
+            ResumeOngoingJobBanner(),
 
             // Incoming Jobs Section
             const IncomingJobsSection(),
